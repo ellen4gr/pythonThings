@@ -11,14 +11,13 @@ class PassGen:
             [sg.Input(key='site', size=(20, 1))],
             [sg.Text('Email/Usuário', size=(10, 1))],
             [sg.Input(key='usuario', size=(20, 1))],
-            [sg.Text('Quantidade de caracteres'), sg.Combo(values =list(
+            [sg.Text('Quantidade de caracteres'), sg.Combo(values=list(
                 range(30)), key='total_chars', default_value=1, size=(3, 1))],
             [sg.Output(size=(32, 5))],
             [sg.Button('Gerar senha')]
         ]
-     
-        self.janela = sg.Window('Password Generator', layout)
 
+        self.janela = sg.Window('Password Generator', layout)
 
     def Iniciar(self):
         while True:
@@ -30,13 +29,11 @@ class PassGen:
                 print(nova_senha)
                 self.SalvarSenha(nova_senha, valores)
 
-
     def gerar_senha(self, valores):
         char_list = 'ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%¨&*'
         chars = random.choices(char_list, k=int(valores['total_chars']))
         new_pass = ''.join(chars)
         return new_pass
-
 
     def SalvarSenha(self, nova_senha, valores):
         with open('senhas.txt', 'a', newline='') as arquivo:
