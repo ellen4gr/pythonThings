@@ -17,7 +17,7 @@ class PassGen:
             [sg.Button('Gerar senha')]
         ]
 
-        self.janela = sg.Window('Pasword Generator', layout)
+        self.janela = sg.Window('Password Generator', layout)
 
 
 def Iniciar(self):
