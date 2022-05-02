@@ -12,7 +12,7 @@ class PassGen:
             [sg.Text('Email/Usuário', size=(10, 1)),
              sg.Input(key='usuario', size=(20, 1))],
             [sg.Text('Quantidade de caracteres'), sg.Combo(values=list(
-                range(30)), key='total_chars', default_values=1, size=(3, 1))],
+                range(30)), key='total_chars', default_value=1, size=(3, 1))],
             [sg.Output(size=(32, 5))],
             [sg.Button('Gerar senha')]
         ]
