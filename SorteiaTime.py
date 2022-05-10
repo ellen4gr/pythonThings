@@ -9,7 +9,7 @@ while resposta != "N":  # and resposta != "n"#:não é necessário o ''AND" pois
     jogadores = input("\nDigite o nome do jogador: ")
     listaJogadores.append(jogadores)
 
-    # upper deixa tudo mínusculo
+    # upper deixa tudo maiusculo
     resposta = input("\nDeseja adicionar mais jogadores [N] / [S] ?").upper()
 
 # laço add na lista jogadores
